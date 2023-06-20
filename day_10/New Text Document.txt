@@ -1,0 +1,17 @@
+we also create our own module
+like
+create one file sample.spy
+write here code
+..........
+.........
+.........
+create another file
+import sample as f:
+print(f.variable_name) 
+
+you also create
+from sample import *
+pritn(just_variable_name) 
+
+warring:
+you don't create a module name as built in name 

@@ -1,0 +1,114 @@
+Lecture 16 : OS module in python [ Part - 1 ]
+================================
+Os module :-
+This module allows us to operate on underlying OS task, 
+Irrespective of it being a windows platform, mac or linux/unix
+meaning you can run windows commands on linux and vice versa.
+-----------------------------------------------------------------------------------------------
+Windows :-
+>> dir  #shows files and directories
+>> ipconfig   #shows ip addrs
+
+Linux :-
+>> ls    #shows files and directory
+>> ifconfig   #shows ip addrs
+-----------------------------------------------------------------------------------------------
+##### Some os module functions #####
+
+>> import os
+>> os.system("ipconfig")
+>> dir(os)
+>> os.getcwd()
+>> os.listdir(path)
+>> os.mkdir("directory_name")
+>> os.rmdir("directoy_name")
+>> os.chdir("directory_name")
+>> os.remove("file_name")
+>> os.rename("old_name" , "new_name")
+>> os.getuid()
+>> os.getgid()
+>> os.getpid()
+
+##### Os module commands and script #####
+
+Using os module this script will easily run in windows and linux
+
+#1
+import os
+print("Importing Os module")
+print("Using Os module")
+print(" ")
+
+print("Current path: " + os.getcwd())
+-----------------------------------------------------------------------------------------------
+#2
+
+print("Importing Os module")
+print("Using Os module")
+print(" ")
+import os
+print("Current path: " + os.getcwd())
+chpath = input(str("Enter path to change to: "))
+os.chdir(chpath)
+print("New path: "+ os.getcwd())
+
+-----------------------------------------------------------------------------------------------
+#3 Changing path and listing old and new path files and dirs
+
+print("Importing Os module")
+print("Using Os module")
+print(" ")
+
+import os
+
+chpath = input("Enter path to change to: ")
+
+print("Listing files and dirs of last path\n" + os.getcwd())
+print(" ")
+print(os.listdir(os.getcwd()))
+
+print(" ")
+print("new path contents are listed below: \n")
+print(os.listdir(chpath))
+
+os.chdir(chpath)
+print("New path: "+ os.getcwd())
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
