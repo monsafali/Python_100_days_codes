@@ -1,0 +1,82 @@
+Lecture 20 : Platform module in Python
+=============================
+Platform module will show you system related information
+-----------------------------------------------------------------------------------------------
+##### Some platform module commands ####
+
+Commands:-
+####
+
+import platform
+
+print(platform.system())
+print(platform.processor())
+print(platform.machine())
+print(platform.architecture())
+print(platform.node())
+print(platform.python_branch())
+print(platform.release())
+print(platform.uname())
+print(platform.platform())
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Output:-
+####
+
+Windows
+Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+AMD64
+('64bit', 'WindowsPE')
+MUSAJAMAL007
+tags/v3.11.2
+10
+uname_result(system='Windows', node='MUSAJAMAL007', release='10', version='10.0.19045', machine='AMD64')
+Windows-10-10.0.19045-SP0
+
+-----------------------------------------------------------------------------------------------
+##### Short script #####
+
+import os
+import platform
+
+if platform.system() == "Windows":
+    print("Showing configurations for windows")
+    os.system('ipconfig')
+elif platform.system() == "Linux":
+    print("Showing configurations for Linux")
+    os.system('ifconfig')
+else:
+    print("Sorry os not detected")
+
+
+
+cat /etc/os-release  |grep -iw "VERSION" | awk -F "=" '{print $2}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
